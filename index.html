@@ -58,7 +58,7 @@
 <main>
 <section class="hero">
   <div class="hero__copy">
-    <span class="eyebrow">Minecraft performance client · Java 1.20+</span>
+    <span class="eyebrow">Minecraft launcher + client · Java 1.20.1</span>
     <h1 class="hero__title">A <span class="sweet">sweeter</span> way to<br>hit your frames.</h1>
     <p class="hero__sub">Candy Client is a featherweight performance client with a <strong>one-key FPS booster</strong> built right into the game. No bloat, no cheats, no bans — just a candy-pink overlay that makes your PC give you everything it's got.</p>
     <div class="hero__actions">
@@ -70,7 +70,7 @@
     </div>
     <ul class="hero__badges">
       <li><span class="tick">✓</span> Ban-safe (no hacks)</li>
-      <li><span class="tick">✓</span> ~2&nbsp;MB, zero telemetry</li>
+      <li><span class="tick">✓</span> Sets itself up · zero telemetry</li>
       <li><span class="tick">✓</span> Works with your existing Minecraft</li>
     </ul>
   </div>
@@ -84,14 +84,14 @@
       </div>
       <div class="fpsread">
         <div class="fpsread__num" id="fpsNum">247</div>
-        <div class="fpsread__label">FPS · <span id="fpsDelta">+161</span> vs vanilla</div>
+        <div class="fpsread__label">FPS · <span id="fpsDelta">live</span> in-game counter</div>
         <div class="fpsbar"><span id="fpsBar" style="width:82%"></span></div>
       </div>
       <div class="toggles">
-        <label class="tog on"><span>Turbo render</span><i></i></label>
-        <label class="tog on"><span>Cull hidden faces</span><i></i></label>
-        <label class="tog on"><span>Particles: lite</span><i></i></label>
-        <label class="tog"><span>Fancy clouds</span><i></i></label>
+        <label class="tog on"><span>Fast graphics</span><i></i></label>
+        <label class="tog on"><span>Particles: minimal</span><i></i></label>
+        <label class="tog on"><span>Clouds off</span><i></i></label>
+        <label class="tog"><span>Smooth lighting</span><i></i></label>
       </div>
       <div class="presetrow">
         <button class="chip chip--active">Competitive</button>
@@ -105,7 +105,7 @@
 
 <!-- stats strip -->
 <section class="stats">
-  <div class="stat"><span class="stat__num" data-count="163" data-suffix="+">0</span><span class="stat__label">avg FPS gained*</span></div>
+  <div class="stat"><span class="stat__num" data-count="5" data-suffix="">0</span><span class="stat__label">FPS mods in one click</span></div>
   <div class="stat"><span class="stat__num" data-count="1" data-suffix=" key">0</span><span class="stat__label">to open the booster</span></div>
   <div class="stat"><span class="stat__num" data-count="0" data-suffix="">0</span><span class="stat__label">ads · trackers · fluff</span></div>
   <div class="stat"><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="stat__label">free in beta</span></div>
@@ -156,7 +156,7 @@
         <div class="slider"><span>Particles</span><div class="slider__track"><i style="left:20%"></i></div><b>Minimal</b></div>
         <div class="slider"><span>Smooth lighting</span><div class="slider__track"><i style="left:10%"></i></div><b>Off</b></div>
         <div class="toggles toggles--wide">
-          <label class="tog on"><span>Entity culling</span><i></i></label>
+          <label class="tog on"><span>View bobbing off</span><i></i></label>
           <label class="tog on"><span>Fast graphics</span><i></i></label>
         </div>
       </div>
@@ -195,11 +195,11 @@
   <div class="why__head">
     <span class="kicker kicker--center">Why Candy</span>
     <h2>What makes it worth switching.</h2>
-    <p class="why__lead">The big clients are 400&nbsp;MB, run their own launcher, and watch what you do. Candy is a single lightweight mod that does the one thing you actually wanted — more frames — and looks good doing it.</p>
+    <p class="why__lead">The big clients re-download the whole game, are hundreds of megabytes, and watch what you do. Candy reuses the Minecraft files you already have, sets itself up in seconds, and does the one thing you actually wanted — more frames — while looking good doing it.</p>
   </div>
   <div class="why__grid">
     <article class="feat"><div class="feat__ic">⚡</div><h3>Built-in booster hotkey</h3><p>No alt-tabbing to a launcher. The panel lives inside your game, one key away.</p></article>
-    <article class="feat"><div class="feat__ic">🪶</div><h3>Featherweight</h3><p>~2&nbsp;MB. Drops into any Fabric setup and starts instantly. No background services.</p></article>
+    <article class="feat"><div class="feat__ic">🚀</div><h3>Its own launcher</h3><p>Mods tab with a built-in mod browser, a live server list with ping, and a one-click FPS pack. Fabric sets itself up.</p></article>
     <article class="feat"><div class="feat__ic">🛡️</div><h3>Ban-safe by design</h3><p>Zero combat or movement hacks. Only performance and cosmetic settings — nothing servers flag.</p></article>
     <article class="feat"><div class="feat__ic">🍬</div><h3>Actually pretty</h3><p>A pink-and-red candy theme across every screen. Your friends will ask what you're running.</p></article>
     <article class="feat"><div class="feat__ic">💾</div><h3>Remembers everything</h3><p>Tune it once. Your presets, hotkey, and settings follow you into every world and server.</p></article>
@@ -216,21 +216,20 @@
   </div>
   <div class="downloads__grid">
     <article class="dcard dcard--feature">
-      <div class="dcard__tag">Client · .jar</div>
+      <div class="dcard__tag">Launcher · Windows</div>
       <h3>Candy Client</h3>
-      <p class="dcard__desc">The Minecraft performance mod: candy splash, in-game FPS booster, saved presets.</p>
+      <p class="dcard__desc">The full launcher: sets up Fabric and Candy for you, imports your servers, browses mods, and installs the FPS pack in one click.</p>
       <ul class="dcard__meta">
-        <li>Minecraft 1.20+ · Fabric Loader</li>
-        <li>Requires Fabric API</li>
-        <li>Windows · macOS · Linux</li>
+        <li>Windows 10 / 11 · ~40&nbsp;MB</li>
+        <li>Minecraft: Java Edition 1.20.1</li>
+        <li>Installs just for you — no admin</li>
       </ul>
-      <a class="btn btn--primary btn--block" id="dlClient" href="#" rel="noopener">Download Candy Client</a>
-      <details class="dcard__how"><summary>How to install (2 min)</summary>
+      <a class="btn btn--primary btn--block" id="dlLauncher" href="#" rel="noopener">Download for Windows</a>
+      <details class="dcard__how"><summary>How to install (1 min)</summary>
         <ol>
-          <li>Install <a href="https://fabricmc.net/use/installer/" target="_blank" rel="noopener">Fabric Loader</a> for your Minecraft version.</li>
-          <li>Download <a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noopener">Fabric API</a> and drop it in your <code>mods</code> folder.</li>
-          <li>Drop <code>candy-client.jar</code> in the same <code>mods</code> folder.</li>
-          <li>Launch the Fabric profile. Press <kbd>Right&nbsp;Shift</kbd> in-game.</li>
+          <li>Run <code>CandyClientSetup.exe</code>. Windows may say it's unrecognized (new apps aren't signed yet) — click <em>More info → Run anyway</em>.</li>
+          <li>Click <strong>Install</strong>. Candy sets itself up and opens.</li>
+          <li>Press <strong>Play</strong>, then <kbd>Right&nbsp;Shift</kbd> in-game for Candy Boost.</li>
         </ol>
       </details>
     </article>
@@ -254,7 +253,8 @@
       </details>
     </article>
   </div>
-  <p class="downloads__foot">Prefer to build it yourself? The client source is on GitHub. <a id="ghLink" href="#" target="_blank" rel="noopener">View the repo →</a></p>
+  <p class="downloads__foot">Already run your own Fabric setup? <a id="dlClient" href="#" rel="noopener">Grab just the mod (.jar) →</a>
+    &nbsp;·&nbsp; Source on <a id="ghLink" href="#" target="_blank" rel="noopener">GitHub →</a></p>
 </section>
 
 <!-- FAQ -->
@@ -263,10 +263,12 @@
   <div class="faq__list">
     <details class="qa"><summary>Will this get me banned?</summary><p>No. Candy only changes performance and cosmetic settings that Minecraft already exposes — render distance, particles, framerate, graphics mode. There is no combat, movement, or X-ray functionality of any kind, so there's nothing for anti-cheats to flag.</p></details>
     <details class="qa"><summary>Will it really give me 100+ FPS?</summary><p>On most setups the booster adds a large chunk of frames by trimming the expensive stuff. But no mod can promise an exact number on every GPU — a very old laptop will gain less than a gaming rig. It gives you every frame your hardware has to give.</p></details>
-    <details class="qa"><summary>Do I need a special launcher?</summary><p>Nope. Candy is a normal Fabric mod. Use the official Minecraft launcher (or your favourite one) with a Fabric profile and drop the jar in your mods folder. Your account and worlds are untouched.</p></details>
+    <details class="qa"><summary>How does the launcher work with my account?</summary><p>Candy sets up Fabric, Candy Client and your mods in its own folder, then opens your official Minecraft Launcher with a ready-made "Candy Client" profile — you play with the login you already use, and Candy never sees your password. Your normal worlds and installs are untouched.</p></details>
+    <details class="qa"><summary>Windows says the app is "unrecognized". Is it safe?</summary><p>That warning appears for every new app that isn't code-signed yet (signing certificates cost money; it's on the list for v1.0). Click <em>More info → Run anyway</em>. Candy installs only for your user, needs no admin rights, and uninstalls cleanly from Apps &amp; features.</p></details>
+    <details class="qa"><summary>Can I use just the mod?</summary><p>Yes. Candy Client is also a normal Fabric mod — drop the .jar into any Fabric 1.20.1 setup with Fabric API and press <kbd>Right&nbsp;Shift</kbd> in-game.</p></details>
     <details class="qa"><summary>Is it really free?</summary><p>Yes, for the whole beta. No payment, no trial timer, no locked features. When v1.0 ships some extras may become paid, but beta users keep what they've got.</p></details>
     <details class="qa"><summary>Does it work with other mods?</summary><p>It plays nicely with most performance and cosmetic mods. If you already run Sodium, Candy's booster will still manage the vanilla options layered on top.</p></details>
-    <details class="qa"><summary>Which Minecraft versions?</summary><p>Built for Fabric on modern versions (1.20+). More versions come as the beta grows — ask on Discord for a specific one.</p></details>
+    <details class="qa"><summary>Which Minecraft versions?</summary><p>Java Edition 1.20.1 during the beta. The launcher warns you about mods or servers built for a different version before you hit Play. More versions come as the beta grows — ask on Discord for one.</p></details>
   </div>
 </section>
 
