@@ -9,9 +9,11 @@ const CONFIG = {
   // - The optimizer .exe is 13 MB, so keep it out of the Pages repo: upload it
   //   as a GitHub Release and point the link at the asset (recommended), or drop
   //   it in website/downloads/ and use "downloads/CandyUltimate.exe".
+  // Files sit next to index.html in the repo, so Pages serves them directly.
+  launcherDownload:  "CandyClientSetup.exe",
   clientDownload:    "downloads/candy-client.jar",
-  optimizerDownload: "https://github.com/YOURNAME/candy-client/releases/latest/download/CandyUltimate.exe",
-  githubRepo:        "https://github.com/YOURNAME/candy-client",
+  optimizerDownload: "CandyUltimate_v6.exe",
+  githubRepo:        "https://github.com/kurmanaruto7-lang/candy-client",
   discord:           "",   // paste your invite; leave "" to hide the link
 
   compliments: [
@@ -36,6 +38,7 @@ const CONFIG = {
     if(hideIfEmpty && !href){ el.style.display="none"; return; }
     el.href = href || "#";
   };
+  set("dlLauncher", CONFIG.launcherDownload);
   set("dlClient", CONFIG.clientDownload);
   set("dlOptimizer", CONFIG.optimizerDownload);
   set("ghLink", CONFIG.githubRepo);
@@ -82,13 +85,12 @@ document.querySelectorAll(".slider__track").forEach(tr => {
   const delta = document.getElementById("fpsDelta");
   const bar = document.getElementById("fpsBar");
   if(!num) return;
-  const base = 86; // "vanilla"
   let cur = 247;
   setInterval(() => {
     const target = 230 + Math.round(Math.random()*70);   // 230-300
     cur += Math.round((target - cur) * 0.5);
     num.textContent = cur;
-    if(delta) delta.textContent = "+" + (cur - base);
+    // no "vs vanilla" number here: it would be a claim we haven't measured
     if(bar) bar.style.width = Math.min(100, Math.round((cur/320)*100)) + "%";
   }, 900);
 })();
